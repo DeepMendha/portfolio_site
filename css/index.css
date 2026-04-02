@@ -1,18 +1,43 @@
+/* Layout (no framework — works on static hosting) */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+    align-items: center;
+}
+
+.col-md-6 {
+    flex: 1 1 280px;
+    padding: 0 12px;
+    min-width: 0;
+}
+
+.col-md-12 {
+    flex: 1 1 100%;
+    padding: 0 12px;
+    min-width: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* Homepage Section Styles */
 .home-section {
     padding-top: 100px;
     padding-bottom: 100px;
-    background-color: #f8f8f8;
-}
-
-/* Set background image for home section */
-.home-section {
-    background-image: url('background.jpg');
-    /* Replace with your image file path */
+    min-height: 50vh;
+    background-color: #1a1a2e;
+    background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.92) 0%, rgba(22, 33, 62, 0.88) 50%, rgba(15, 52, 96, 0.85) 100%),
+        url('../images/background.jpg');
     background-size: cover;
     background-position: center;
-    height: 50vh;
-    /* Adjust height as needed */
 }
 
 .profile-photo-wrapper {
@@ -26,6 +51,25 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.profile-photo-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.home-section .section-title {
+    color: #fff;
+}
+
+.home-section .section-intro,
+.home-section .section-subtitle {
+    color: #e8e8e8;
+}
+
+.home-section .section-intro {
+    font-weight: 600;
 }
 
 .section-title {
@@ -78,6 +122,18 @@
     background-color: #494f52;
 }
 
+.motivation-section {
+    padding: 48px 0;
+    background-color: #fff;
+}
+
+.motivation-section .section-intro {
+    font-weight: 400;
+    color: #555;
+    line-height: 1.65;
+    margin-bottom: 0;
+}
+
 /* CSS for Navigation Bar */
 .navbar {
     background-color: #333;
@@ -115,9 +171,11 @@
 
 .footer-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 8px;
 }
 
 .footer-social-icons {

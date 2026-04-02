@@ -4,6 +4,14 @@
     padding: 60px 0;
   }
 
+  .contact-note {
+    max-width: 520px;
+    margin: 0 auto 24px;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+  }
+
   .container {
     max-width: 800px;
     margin: 0 auto;

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>My Data Science Profile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact — Deep Mendha</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -15,50 +17,49 @@
             <li><a href="about.html">About Me</a></li>
             <li><a href="skills.html">Skills</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
     <section id="contact">
         <div class="container">
             <h2>Contact Me</h2>
-            <form action="success.html" method="post">
+            <p class="contact-note">This form opens your email app with a pre-filled message (GitHub Pages is static and
+                does not run a server).</p>
+            <form id="contact-form" data-mailto="mailto:your.email@example.com">
                 <div class="form-row">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required autocomplete="name">
                 </div>
                 <div class="form-row">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required autocomplete="email">
                 </div>
                 <div class="form-row">
                     <label for="message">Message</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Send via email app">
             </form>
         </div>
     </section>
-    <!-- Footer Section -->
     <footer class="footer-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <!-- Footer Content -->
                     <div class="footer-content">
-                        <!-- Social Media Icons -->
                         <div class="footer-social-icons">
                             <a href="https://www.linkedin.com/in/deepmendha" target="_blank"
                                 rel="noopener noreferrer"><i class="fa fa-linkedin fa-2x"></i></a>
                             <a href="https://www.github.com/DeepMendha" target="_blank" rel="noopener noreferrer"><i
                                     class="fa fa-github fa-2x"></i></a>
                         </div>
-                        <!-- Footer Text -->
-                        <p class="footer-text">© 2023 Deep Mendha. All rights reserved.</p>
+                        <p class="footer-text">© 2026 Deep Mendha. All rights reserved.</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="./js/main.js" defer></script>
 </body>
 
 </html>
