@@ -1,22 +1,32 @@
 # portfolio_site
 
-Static personal portfolio: HTML, CSS, and JavaScript. Suitable for [GitHub Pages](https://pages.github.com/) (no build step).
+Modern personal portfolio built as a **React + Vite single-page application**. Designed to work well with **GitHub Pages**.
 
-## GitHub Pages
+## GitHub Pages (recommended: `gh-pages` branch)
 
-1. Push this repository to GitHub.
-2. In the repo: **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to **Deploy from a branch**, choose **main** (or your default branch) and **/ (root)**.
-4. Save. After a minute, the site is available at `https://<username>.github.io/<repo>/` (or your custom domain if configured).
+This repo publishes the Vite build output (`dist/`) to a separate `gh-pages` branch (so your `main` branch stays as source).
 
-`index.html` at the repository root is the homepage.
+1. In GitHub: **Settings → Pages**
+2. Set **Source** to **Deploy from a branch**
+3. Choose **Branch:** `gh-pages` and **Folder:** `/ (root)`
+4. Save
 
-## Local files to add
+After that, the website should be available at: `https://<username>.github.io/<repo>/` (or your custom domain).
 
-- `images/profile.jpg` — optional headshot (if missing, an initials placeholder is shown).
-- `images/background.jpg` — optional hero background (a gradient still shows without it).
-- `assets/resume.pdf` — optional PDF for the “Download Resume” button.
+### Automatic deploy (included)
 
-## Contact form
+The workflow file `/.github/workflows/deploy-gh-pages.yml` builds and deploys on every push to `main`.
 
-The contact form uses `mailto:` via `js/main.js`. Set your address on the form in `contact.html` (`data-mailto` on `#contact-form`). For a hosted form without mailto, you can later plug in a provider (for example Formspree) while keeping the same markup.
+### SPA routing note
+
+Because this is an SPA, direct links/refreshes need a fallback route. The project includes `public/404.html` which redirects back to the app entry.
+
+## Local files to add (optional)
+
+- `public/images/profile.jpg` — optional headshot (if missing, an initials placeholder is shown).
+- `public/images/background.jpg` — optional hero background (a gradient still shows without it).
+- `public/assets/resume.pdf` — optional PDF for the “Download Resume” button.
+
+## Contact
+
+GitHub Pages is static, so the contact form opens your email app via `mailto:` from `src/pages/Contact.jsx`.
