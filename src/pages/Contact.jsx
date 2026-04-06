@@ -28,14 +28,10 @@ export default function Contact() {
   }
 
   return (
-    <section className="page">
+    <section id="contact" className="page">
       <div className="container">
         <div className="section-card content-block">
           <h2 className="section-title">Contact Me</h2>
-          <p className="section-subtitle">
-            GitHub Pages is static, so this form opens your email app with a
-            pre-filled message.
-          </p>
 
           <form onSubmit={onSubmit}>
             <div className="form-row">

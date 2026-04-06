@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+
 import { assetUrl } from '../utils/basePath.js'
 
 export default function Home() {
@@ -9,12 +9,12 @@ export default function Home() {
   const [imageOk, setImageOk] = useState(true)
 
   return (
-    <section className="hero">
+    <section id="home" className="hero">
       <div className="container hero-grid">
         <div
           className="hero-bg"
           style={{
-            backgroundImage: `linear-gradient(135deg, rgba(11,18,32,0.92) 0%, rgba(8,18,32,0.78) 55%, rgba(37,99,235,0.35) 100%), url(${bgSrc})`,
+            backgroundImage: `linear-gradient(135deg, var(--hero-overlay-1) 0%, var(--hero-overlay-2) 55%, var(--hero-overlay-3) 100%), url(${bgSrc})`,
           }}
         >
           <div className="profile-photo-wrapper">
@@ -32,12 +32,12 @@ export default function Home() {
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
               >
-                <circle cx="100" cy="100" r="100" fill="rgba(37,99,235,0.35)" />
+                <circle cx="100" cy="100" r="100" fill="var(--hero-fallback-fill)" />
                 <text
                   x="100"
                   y="118"
                   textAnchor="middle"
-                  fill="rgba(255,255,255,0.92)"
+                  fill="var(--hero-fallback-text)"
                   fontSize="58"
                   fontFamily="system-ui, -apple-system, sans-serif"
                   fontWeight="700"
@@ -66,9 +66,9 @@ export default function Home() {
             >
               Download Resume (PDF)
             </a>
-            <Link className="btn btn-secondary" to="/contact">
+            {/* <a className="btn btn-secondary" href="#contact">
               Contact Me
-            </Link>
+            </a> */}
           </div>
           <p className="muted" style={{ marginTop: 14, lineHeight: 1.5 }}>
             Prefer direct links? Use the navigation menu above.

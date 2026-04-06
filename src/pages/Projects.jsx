@@ -1,21 +1,16 @@
 export default function Projects() {
   return (
-    <section className="page">
+    <section id="projects" className="page">
       <div className="container">
         <div className="section-card content-block">
           <h2 className="section-title">Projects</h2>
-          <p className="section-subtitle">
-            Selected work focusing on scalable ETL, NLP, and recommender systems.
-          </p>
 
-          <div className="projects-grid">
-            <article className="project-card">
-              <h3 className="section-subtitle" style={{ marginTop: 0 }}>
+          <div className="timeline-container">
+            <div className="timeline-item">
+              <h4 className="timeline-title">
                 ETL Pipeline for Customer Analytics
-              </h3>
-              <p className="muted" style={{ marginTop: -4 }}>
-                Apr 2023 - Jun 2023
-              </p>
+              </h4>
+              <p className="timeline-date">Apr 2023 - Jun 2023</p>
               <ul className="list">
                 <li>
                   End-to-end ETL pipeline to ingest, clean, and transform data
@@ -30,15 +25,13 @@ export default function Projects() {
                   performance by 40%.
                 </li>
               </ul>
-            </article>
+            </div>
 
-            <article className="project-card">
-              <h3 className="section-subtitle" style={{ marginTop: 0 }}>
+            <div className="timeline-item">
+              <h4 className="timeline-title">
                 Text Emotion Detection
-              </h3>
-              <p className="muted" style={{ marginTop: -4 }}>
-                Jan 2023 - Apr 2023
-              </p>
+              </h4>
+              <p className="timeline-date">Jan 2023 - Apr 2023</p>
               <ul className="list">
                 <li>
                   Text-based emotion detection algorithm using machine learning
@@ -49,15 +42,13 @@ export default function Projects() {
                   stemming to improve accuracy by 25%.
                 </li>
               </ul>
-            </article>
+            </div>
 
-            <article className="project-card">
-              <h3 className="section-subtitle" style={{ marginTop: 0 }}>
+            <div className="timeline-item">
+              <h4 className="timeline-title">
                 Recommendation System using Deep Learning
-              </h3>
-              <p className="muted" style={{ marginTop: -4 }}>
-                Nov 2017 - May 2018
-              </p>
+              </h4>
+              <p className="timeline-date">Nov 2017 - May 2018</p>
               <ul className="list">
                 <li>
                   Improved recommender system performance by addressing the
@@ -72,7 +63,7 @@ export default function Projects() {
                   handling datasets with over 1 million entries.
                 </li>
               </ul>
-            </article>
+            </div>
           </div>
         </div>
       </div>

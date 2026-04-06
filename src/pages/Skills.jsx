@@ -1,19 +1,17 @@
 export default function Skills() {
   return (
-    <section className="page">
+    <section id="skills" className="page">
       <div className="container">
         <div className="section-card content-block">
           <h2 className="section-title">Skills</h2>
-          <p className="section-subtitle">
-            A practical toolset for end-to-end data and machine learning
-            delivery.
-          </p>
 
-          <div className="two-col">
-            <div>
-              <h3 className="section-subtitle" style={{ marginTop: 0 }}>
+          <details className="skill-accordion" open>
+            <summary className="skill-summary">
+              <h3 className="section-subtitle" style={{ margin: 0 }}>
                 Programming & Scripting
               </h3>
+            </summary>
+            <div className="skill-content">
               <ul className="list">
                 <li>Python</li>
                 <li>R</li>
@@ -22,11 +20,15 @@ export default function Skills() {
                 <li>Bash / shell</li>
               </ul>
             </div>
+          </details>
 
-            <div>
-              <h3 className="section-subtitle" style={{ marginTop: 0 }}>
+          <details className="skill-accordion">
+            <summary className="skill-summary">
+              <h3 className="section-subtitle" style={{ margin: 0 }}>
                 Machine Learning & AI
               </h3>
+            </summary>
+            <div className="skill-content">
               <ul className="list">
                 <li>
                   scikit-learn, TensorFlow, NumPy, Pandas, Matplotlib, Seaborn
@@ -35,15 +37,15 @@ export default function Skills() {
                 <li>Deep Learning (CNN, DNN)</li>
               </ul>
             </div>
-          </div>
+          </details>
 
-          <div style={{ height: 18 }} />
-
-          <div className="two-col">
-            <div>
-              <h3 className="section-subtitle" style={{ marginTop: 0 }}>
+          <details className="skill-accordion">
+            <summary className="skill-summary">
+              <h3 className="section-subtitle" style={{ margin: 0 }}>
                 Data Engineering & Analytics
               </h3>
+            </summary>
+            <div className="skill-content">
               <ul className="list">
                 <li>Apache Airflow</li>
                 <li>Databricks</li>
@@ -53,11 +55,15 @@ export default function Skills() {
                 <li>Power BI, Tableau</li>
               </ul>
             </div>
+          </details>
 
-            <div>
-              <h3 className="section-subtitle" style={{ marginTop: 0 }}>
+          <details className="skill-accordion">
+            <summary className="skill-summary">
+              <h3 className="section-subtitle" style={{ margin: 0 }}>
                 Cloud & Big Data Platforms
               </h3>
+            </summary>
+            <div className="skill-content">
               <ul className="list">
                 <li>
                   Microsoft Azure (Databricks, ML Studio, Storage)
@@ -67,15 +73,15 @@ export default function Skills() {
                 <li>Docker</li>
               </ul>
             </div>
-          </div>
+          </details>
 
-          <div style={{ height: 18 }} />
-
-          <div className="two-col">
-            <div>
-              <h3 className="section-subtitle" style={{ marginTop: 0 }}>
+          <details className="skill-accordion">
+            <summary className="skill-summary">
+              <h3 className="section-subtitle" style={{ margin: 0 }}>
                 Databases
               </h3>
+            </summary>
+            <div className="skill-content">
               <ul className="list">
                 <li>MySQL</li>
                 <li>PostgreSQL</li>
@@ -83,21 +89,23 @@ export default function Skills() {
                 <li>NoSQL</li>
               </ul>
             </div>
+          </details>
 
-            <div>
-              <h3 className="section-subtitle" style={{ marginTop: 0 }}>
+          <details className="skill-accordion">
+            <summary className="skill-summary">
+              <h3 className="section-subtitle" style={{ margin: 0 }}>
                 Tools & DevOps
               </h3>
+            </summary>
+            <div className="skill-content">
               <ul className="list">
-                <li>
-                  FastAPI, REST APIs
-                </li>
+                <li>FastAPI, REST APIs</li>
                 <li>Git, GitLab, PyTest</li>
                 <li>Jira, ServiceNow, VS Code</li>
                 <li>Jupyter, Postman</li>
               </ul>
             </div>
-          </div>
+          </details>
         </div>
       </div>
     </section>

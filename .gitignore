@@ -1,0 +1,29 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Node dependencies
+node_modules/
+
+# OS files
+.DS_Store
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Vite production output
+dist/
+dist-ssr/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# GitHub specific
+.github/
