@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 export default function Projects() {
   return (
     <section id="projects" className="page">
@@ -6,7 +8,13 @@ export default function Projects() {
           <h2 className="section-title">Projects</h2>
 
           <div className="timeline-container">
-            <div className="timeline-item">
+            <motion.div 
+              className="timeline-item"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
               <h4 className="timeline-title">
                 ETL Pipeline for Customer Analytics
               </h4>
@@ -25,9 +33,15 @@ export default function Projects() {
                   performance by 40%.
                 </li>
               </ul>
-            </div>
+            </motion.div>
 
-            <div className="timeline-item">
+            <motion.div 
+              className="timeline-item"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
               <h4 className="timeline-title">
                 Text Emotion Detection
               </h4>
@@ -42,9 +56,15 @@ export default function Projects() {
                   stemming to improve accuracy by 25%.
                 </li>
               </ul>
-            </div>
+            </motion.div>
 
-            <div className="timeline-item">
+            <motion.div 
+              className="timeline-item"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <h4 className="timeline-title">
                 Recommendation System using Deep Learning
               </h4>
@@ -63,7 +83,7 @@ export default function Projects() {
                   handling datasets with over 1 million entries.
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

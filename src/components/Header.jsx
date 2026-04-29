@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 const links = [
   { href: '#home', label: 'Home' },
@@ -31,7 +32,14 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="navbar" role="navigation" aria-label="Primary navigation">
+    <motion.header 
+      className="navbar" 
+      role="navigation" 
+      aria-label="Primary navigation"
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <ul>
         {links.map((l) => (
           <li key={l.href}>
@@ -44,7 +52,7 @@ export default function Header() {
           </li>
         ))}
       </ul>
-    </header>
+    </motion.header>
   )
 }
 

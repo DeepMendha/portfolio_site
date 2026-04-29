@@ -1,23 +1,34 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { Download } from 'lucide-react'
 
 import { assetUrl } from '../utils/basePath.js'
 
 export default function Home() {
   const profileSrc = assetUrl('images/profile.jpg')
-  const bgSrc = assetUrl('images/background.jpg')
+  const bgSrc = assetUrl('images/ai_bg.png')
 
   const [imageOk, setImageOk] = useState(true)
 
   return (
     <section id="home" className="hero">
       <div className="container hero-grid">
-        <div
+        <motion.div
           className="hero-bg"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           style={{
             backgroundImage: `linear-gradient(135deg, var(--hero-overlay-1) 0%, var(--hero-overlay-2) 55%, var(--hero-overlay-3) 100%), url(${bgSrc})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
           }}
         >
-          <div className="profile-photo-wrapper">
+          <motion.div 
+            className="profile-photo-wrapper"
+            whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.4)" }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
             {imageOk ? (
               <img
                 className="profile-photo"
@@ -46,10 +57,15 @@ export default function Home() {
                 </text>
               </svg>
             )}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="section-card hero-panel">
+        <motion.div 
+          className="section-card hero-panel"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+        >
           <h1 className="section-title">Deep Mendha</h1>
           <p className="section-subtitle">
             Data Scientist | Data Analyst | Data Engineer
@@ -59,13 +75,15 @@ export default function Home() {
             deployment, and actionable analytics.
           </p>
           <div className="cta-row">
-            <a
+            <motion.a
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
               className="btn btn-primary"
               href={assetUrl('assets/resume.pdf')}
               download
             >
-              Download Resume (PDF)
-            </a>
+              <Download size={18} /> Download Resume (PDF)
+            </motion.a>
             {/* <a className="btn btn-secondary" href="#contact">
               Contact Me
             </a> */}
@@ -73,7 +91,7 @@ export default function Home() {
           <p className="muted" style={{ marginTop: 14, lineHeight: 1.5 }}>
             Prefer direct links? Use the navigation menu above.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

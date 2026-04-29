@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 export default function Skills() {
   return (
     <section id="skills" className="page">
@@ -5,110 +7,151 @@ export default function Skills() {
         <div className="section-card content-block">
           <h2 className="section-title">Skills</h2>
 
-          <details className="skill-accordion" open>
-            <summary className="skill-summary">
-              <h3 className="section-subtitle" style={{ margin: 0 }}>
-                Programming & Scripting
-              </h3>
-            </summary>
-            <div className="skill-content">
-              <ul className="list">
-                <li>Python</li>
-                <li>R</li>
-                <li>SQL</li>
-                <li>Java</li>
-                <li>Bash / shell</li>
-              </ul>
-            </div>
-          </details>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+          >
+            <details className="skill-accordion" open>
+              <summary className="skill-summary">
+                <h3 className="section-subtitle" style={{ margin: 0 }}>
+                  Programming & Scripting
+                </h3>
+              </summary>
+              <div className="skill-content">
+                <ul className="list">
+                  <li>Python</li>
+                  <li>R</li>
+                  <li>SQL</li>
+                  <li>Java</li>
+                  <li>Bash / shell</li>
+                </ul>
+              </div>
+            </details>
+          </motion.div>
 
-          <details className="skill-accordion">
-            <summary className="skill-summary">
-              <h3 className="section-subtitle" style={{ margin: 0 }}>
-                Machine Learning & AI
-              </h3>
-            </summary>
-            <div className="skill-content">
-              <ul className="list">
-                <li>
-                  scikit-learn, TensorFlow, NumPy, Pandas, Matplotlib, Seaborn
-                </li>
-                <li>NLP (NER, Text Classification, Sentiment Analysis)</li>
-                <li>Deep Learning (CNN, DNN)</li>
-              </ul>
-            </div>
-          </details>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+          >
+            <details className="skill-accordion">
+              <summary className="skill-summary">
+                <h3 className="section-subtitle" style={{ margin: 0 }}>
+                  Machine Learning & AI
+                </h3>
+              </summary>
+              <div className="skill-content">
+                <ul className="list">
+                  <li>
+                    scikit-learn, TensorFlow, NumPy, Pandas, Matplotlib, Seaborn
+                  </li>
+                  <li>NLP (NER, Text Classification, Sentiment Analysis)</li>
+                  <li>Deep Learning (CNN, DNN)</li>
+                </ul>
+              </div>
+            </details>
+          </motion.div>
 
-          <details className="skill-accordion">
-            <summary className="skill-summary">
-              <h3 className="section-subtitle" style={{ margin: 0 }}>
-                Data Engineering & Analytics
-              </h3>
-            </summary>
-            <div className="skill-content">
-              <ul className="list">
-                <li>Apache Airflow</li>
-                <li>Databricks</li>
-                <li>PySpark</li>
-                <li>ETL Pipelines</li>
-                <li>Data Cleaning & Transformation</li>
-                <li>Power BI, Tableau</li>
-              </ul>
-            </div>
-          </details>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+          >
+            <details className="skill-accordion">
+              <summary className="skill-summary">
+                <h3 className="section-subtitle" style={{ margin: 0 }}>
+                  Data Engineering & Analytics
+                </h3>
+              </summary>
+              <div className="skill-content">
+                <ul className="list">
+                  <li>Apache Airflow</li>
+                  <li>Databricks</li>
+                  <li>PySpark</li>
+                  <li>ETL Pipelines</li>
+                  <li>Data Cleaning & Transformation</li>
+                  <li>Power BI, Tableau</li>
+                </ul>
+              </div>
+            </details>
+          </motion.div>
 
-          <details className="skill-accordion">
-            <summary className="skill-summary">
-              <h3 className="section-subtitle" style={{ margin: 0 }}>
-                Cloud & Big Data Platforms
-              </h3>
-            </summary>
-            <div className="skill-content">
-              <ul className="list">
-                <li>
-                  Microsoft Azure (Databricks, ML Studio, Storage)
-                </li>
-                <li>AWS (S3, Lambda)</li>
-                <li>Google Cloud Platform (GCP)</li>
-                <li>Docker</li>
-              </ul>
-            </div>
-          </details>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+          >
+            <details className="skill-accordion">
+              <summary className="skill-summary">
+                <h3 className="section-subtitle" style={{ margin: 0 }}>
+                  Cloud & Big Data Platforms
+                </h3>
+              </summary>
+              <div className="skill-content">
+                <ul className="list">
+                  <li>
+                    Microsoft Azure (Databricks, ML Studio, Storage)
+                  </li>
+                  <li>AWS (S3, Lambda)</li>
+                  <li>Google Cloud Platform (GCP)</li>
+                  <li>Docker</li>
+                </ul>
+              </div>
+            </details>
+          </motion.div>
 
-          <details className="skill-accordion">
-            <summary className="skill-summary">
-              <h3 className="section-subtitle" style={{ margin: 0 }}>
-                Databases
-              </h3>
-            </summary>
-            <div className="skill-content">
-              <ul className="list">
-                <li>MySQL</li>
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-                <li>NoSQL</li>
-              </ul>
-            </div>
-          </details>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+          >
+            <details className="skill-accordion">
+              <summary className="skill-summary">
+                <h3 className="section-subtitle" style={{ margin: 0 }}>
+                  Databases
+                </h3>
+              </summary>
+              <div className="skill-content">
+                <ul className="list">
+                  <li>MySQL</li>
+                  <li>PostgreSQL</li>
+                  <li>MongoDB</li>
+                  <li>NoSQL</li>
+                </ul>
+              </div>
+            </details>
+          </motion.div>
 
-          <details className="skill-accordion">
-            <summary className="skill-summary">
-              <h3 className="section-subtitle" style={{ margin: 0 }}>
-                Tools & DevOps
-              </h3>
-            </summary>
-            <div className="skill-content">
-              <ul className="list">
-                <li>FastAPI, REST APIs</li>
-                <li>Git, GitLab, PyTest</li>
-                <li>Jira, ServiceNow, VS Code</li>
-                <li>Jupyter, Postman</li>
-              </ul>
-            </div>
-          </details>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.5 }}
+          >
+            <details className="skill-accordion">
+              <summary className="skill-summary">
+                <h3 className="section-subtitle" style={{ margin: 0 }}>
+                  Tools & DevOps
+                </h3>
+              </summary>
+              <div className="skill-content">
+                <ul className="list">
+                  <li>FastAPI, REST APIs</li>
+                  <li>Git, GitLab, PyTest</li>
+                  <li>Jira, ServiceNow, VS Code</li>
+                  <li>Jupyter, Postman</li>
+                </ul>
+              </div>
+            </details>
+          </motion.div>
         </div>
       </div>
     </section>
   )
 }
-

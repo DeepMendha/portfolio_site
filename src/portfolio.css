@@ -1,37 +1,37 @@
-/* Portfolio app styles (Noxfolio Theme) */
+/* Portfolio app styles (Sleek & Professional Theme) */
 :root {
-  --bg: #1f2029;
-  --surface: rgba(43, 45, 53, 0.95);
-  --surface-2: #343640;
-  --text: #ffffff;
-  --muted: #ffffff;
-  --border: rgba(255, 255, 255, 0.08);
+  --bg: #0f172a;
+  --surface: rgba(30, 41, 59, 0.7);
+  --surface-2: rgba(51, 65, 85, 0.8);
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.1);
 
-  --navbar-bg: rgba(31, 32, 41, 0.95);
-  --navbar-link: #ffffff;
-  --navbar-link-hover: transparent;
-  --navbar-link-active: transparent;
+  --navbar-bg: rgba(15, 23, 42, 0.8);
+  --navbar-link: #e2e8f0;
+  --navbar-link-hover: rgba(6, 182, 212, 0.1);
+  --navbar-link-active: rgba(6, 182, 212, 0.15);
   --input-bg: rgba(255, 255, 255, 0.05);
-  --placeholder: #a3a5a8;
+  --placeholder: #64748b;
 
-  --hero-overlay-1: rgba(31, 32, 41, 0.9);
-  --hero-overlay-2: rgba(31, 32, 41, 0.7);
-  --hero-overlay-3: rgba(193, 255, 0, 0.05);
-  --hero-fallback-fill: #2b2d35;
-  --hero-fallback-text: #c1ff00;
+  --hero-overlay-1: rgba(15, 23, 42, 0.85);
+  --hero-overlay-2: rgba(15, 23, 42, 0.6);
+  --hero-overlay-3: rgba(6, 182, 212, 0.15);
+  --hero-fallback-fill: #1e293b;
+  --hero-fallback-text: #06b6d4;
 
-  --primary: #c1ff00;
-  --primary-hover: #a1d900;
+  --primary: #06b6d4;
+  --primary-hover: #0891b2;
   --secondary: transparent;
-  --secondary-hover: rgba(193, 255, 0, 0.1);
+  --secondary-hover: rgba(6, 182, 212, 0.1);
 
-  --radius: 14px;
-  --shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  --radius: 16px;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 
   --container: 1100px;
 
-  --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
-  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --sans: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 html {
